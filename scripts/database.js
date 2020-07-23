@@ -1,6 +1,7 @@
 import { consultingDay } from "./app.js";
 import { consultingHour } from "./app.js";
 import { consultingTime } from "./app.js";
+import { spinner } from "./spinner.js";
 
 const db = firebase.firestore();
 
@@ -23,6 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const fetchData = db.collection("data").doc("time");
     fetchData.get().then(function (doc) {
         if (doc.exists) {
+            spinner.stop();
+            const timerParagaphDisplay = document.querySelector('.grid-item-2_timer_p');
+            timerParagaphDisplay.setAttribute('style', 'display: block');
             const data = doc.data();
             const timestamp = new Date(data.created_at.toDate());
             consultingDay.innerHTML = data.day;
@@ -34,6 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             window.alert("Nieokreślono godzin konsultacji");
         }
     }).catch(error => {
-        window.alert("Wystąpił błąd podczas zmiany czasu konsultacji: ", error);
+        console.log(error)
+        window.alert("Wystąpił błąd podczas ładowania czasu konsultacji: ", error);
     });
 });

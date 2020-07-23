@@ -81,9 +81,13 @@ h1 {
 }
 
 .grid-item-2_timer p {
+  display: none;
   align-self: center;
   font-size: 2.5em;
   text-align: center;
+}
+.timer_wrap-spinner {
+  position: relative;
 }
 
 .grid-item-3_div {

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="spin.css">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/5b64be6f46.js" crossorigin="anonymous"></script>
 </head>
@@ -19,11 +20,14 @@
             </header>
             <main class="grid-item-2">
                 <div class="grid-item-2_timer">
-                    <p>
+                    <p class='grid-item-2_timer_p'>
                         <strong class='consulting-day'>-------</strong>
                         <br>
                         <time class='consulting-hour'>-----</time>
                     </p>
+                    <div class='timer_wrap-spinner'>
+                        <div class="timer_spinner"></div>   
+                    </div>
                 </div>
                 <form class=''>
                     <p>Logowanie jest dostępne tylko dla Pana Doktora Nowaka!</p>
@@ -34,8 +38,6 @@
                     <label for="inputPassword">Password</label>
                     <input type="password" class="" id="inputPassword" name="inputPassword" autocomplete="on"
                         placeholder="Password">
-
-
                     <button type="submit" class="form_btn-login">Zaloguj</button>
                 </form>
             </main>
@@ -67,14 +69,19 @@
         </div>
     </div>
 </body>
-<script type="module" src='environments/environmnet.js'></script>
+<script type="module" src='./scripts/spin.js'></script>
+<script type="module" src='./scripts/spinner.js'></script>
+
+<!-- <script type="module" src="node_modules/spin.js/spin.js"></script> -->
+
+<script type="module" src='./environments/environmnet.js'></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
 
-<script type="module" src='scripts/auth.js'></script>
-<script type="module" src='scripts/app.js'></script>
-<script type="module" src='scripts/database.js'></script>
+<script type="module" src='./scripts/auth.js'></script>
+<script type="module" src='./scripts/app.js'></script>
+<script type="module" src='./scripts/database.js'></script>
 
 
 </html>
