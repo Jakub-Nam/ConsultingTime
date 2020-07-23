@@ -1,9 +1,7 @@
-import { firebaseConfig } from './../environments/environmnet.js';
+// import { firebaseConfig } from './../environments/environmnet.js';
 import { toggleTimer } from './app.js';
-// document.addEventListener('DOMContentLoaded', () => {
-//     console.log(firebaseConfig);
-// })
-firebase.initializeApp(firebaseConfig);
+
+// firebase.initializeApp(firebaseConfig);
 
 class User {
     constructor(login, password) {
@@ -11,7 +9,7 @@ class User {
             this.password = password
     }
 }
-// const userId = document.querySelector('.userId');
+
 document.querySelector('form').addEventListener('submit', event => {
 
     event.preventDefault();
@@ -26,7 +24,7 @@ document.querySelector('form').addEventListener('submit', event => {
     firebase.auth().signInWithEmailAndPassword(user.login, user.password)
         .then(response => {
             console.log('res', response);
-            window.alert("Pomyślnie zalogowano.")
+            window.alert("Pomyślnie zalogowano.");
 
             const toggleBtnDiv = document.querySelector('.grid-item-3_div');
             toggleBtnDiv.setAttribute('style', 'display: none');

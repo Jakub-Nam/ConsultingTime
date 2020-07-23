@@ -1,8 +1,9 @@
-import {pushData} from "./database.js";
+import { pushData } from "./database.js";
 
 
-const consultingDay = document.querySelector('.consulting-day');
-const consultingHour = document.querySelector('.consulting-hour');
+export const consultingDay = document.querySelector('.consulting-day');
+export const consultingHour = document.querySelector('.consulting-hour');
+export const consultingTime = document.querySelector('.consulting-change-time');
 
 const toggleBtn = document.querySelector('.toggle-btn')
 toggleBtn.addEventListener('click', () => {
@@ -67,8 +68,7 @@ groupHours.addEventListener('click', (e) => {
 });
 
 function updateConsultingTime() {
-    const consultingTime = document.querySelector('.consulting-change-time');
-
+   
     const now = new Date();
     const getMonth = "0" + (now.getMonth() + 1);
     const getDay = "0" + now.getDate();
@@ -81,21 +81,6 @@ function updateConsultingTime() {
 
 
     const dateTime = `o godzinie ${time}, dnia ${date}r.`
-    
+
     consultingTime.innerHTML = dateTime;
 };
-
-// function setData(selectedDay, selectedHour) {
-//     const now = new Date();
-//     db.collection("data").doc("time").set({
-//         day: selectedDay,
-//         hour: selectedHour,
-//         created_at: firebase.firestore.Timestamp.fromDate(now)
-//     })
-//         .then(function () {
-//             console.log("Document successfully written!");
-//         })
-//         .catch(function (error) {
-//             console.error("Error writing document: ", error);
-//         });
-// }
