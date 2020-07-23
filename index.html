@@ -12,50 +12,66 @@
     <div class="container">
         <div class="grid">
             <header class="grid-item-1">
-
                 <div class="grid-item_bar"></div>
                 <div class="grid-item-1_h1">
                     <h1>Godziny Konsultacji</h1>
                 </div>
-
             </header>
-
             <main class="grid-item-2">
                 <div class="grid-item-2_timer">
-                    <p> <strong class='consultingDay'>Środa
+                    <p>
+                        <strong class='consulting-day'>Środa</strong>
                         <br>
-                        <time class='consultingHour'>10:00</time></strong>
+                        <time class='consulting-hour'>10:00</time>
                     </p>
                 </div>
                 <form class=''>
-                    <div class="">
-                      <label for="inputEmail">Email address</label>
-                      <input type="email" class="" id="inputEmail" name="inputEmail" aria-describedby="emailHelp" autocomplete="on"
-                        placeholder="Email adres...">
-                    </div>
-                    <div class="">
-                      <label for="inputPassword">Password</label>
-                      <input type="password" class="" id="inputPassword" name="inputPassword"  autocomplete="on" placeholder="Password">
-                    </div>
-            
-                    <button type="submit" class="">Zaloguj</button>
-                  </form>
+                    <p>Logowanie jest dostępne tylko dla Pana Doktora Nowaka!</p>
+                    <label for="inputEmail">Email address</label>
+                    <input type="email" class="" id="inputEmail" name="inputEmail" aria-describedby="emailHelp"
+                        autocomplete="on" placeholder="Email adres...">
+
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="" id="inputPassword" name="inputPassword" autocomplete="on"
+                        placeholder="Password">
+
+
+                    <button type="submit" class="form_btn-login">Zaloguj</button>
+                </form>
             </main>
             <div class="grid-item-3">
                 <div class="grid-item-3_div">
                     <button class='toggle-btn'>
                         <i class="fas fa-user-md fa-2x"></i>
                     </button>
-                </div> 
+                </div>
+                <div class="group-btn group-days">
+                    <button type='button' class='group-btn_btn'>Poniedziałek</button>
+                    <button type='button' class='group-btn_btn'>Wtorek</button>
+                    <button type='button' class='group-btn_btn'>Środa</button>
+                    <button type='button' class='group-btn_btn'>Czwartek</button>
+                    <button type='button' class='group-btn_btn'>Piątek</button>
+                </div>
+                <div class="group-btn group-hours">
+                    <button type='button' class='group-btn_btn'>8.00 - 9.00</button>
+                    <button type='button' class='group-btn_btn'>9.00 - 10.00</button>
+                    <button type='button' class='group-btn_btn'>10.00 - 11.00</button>
+                    <button type='button' class='group-btn_btn'>11.00 - 12.00 </button>
+                    <button type='button' class='group-btn_btn'>12.00 - 13.00</button>
+                </div>
             </div>
             <footer class="grid-item-4">
-                <p>Ostatnia zmiana godzin konsultacji nastąpiła <time class='consultingChangeTime'>??:??</time></p>
-
+                <p>Ostatnia zmiana godzin konsultacji nastąpiła <time class='consulting-change-time'>??:??</time></p>
                 <span>© 2020 J. Nam.<span>
             </footer>
         </div>
     </div>
 </body>
-<script src='app.js'></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
+<script defer type="module" src='scripts/auth.js'></script>
+<script type="module" src='scripts/app.js'></script>
+<script type="module" src='scripts/database.js'></script>
+
 
 </html>
