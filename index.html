@@ -1,60 +1,66 @@
-<html lang="en">
+<html lang='en'>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <link rel="stylesheet" type="text/css" href="spin.css">
-    <title>Document</title>
-    <script src="https://kit.fontawesome.com/5b64be6f46.js" crossorigin="anonymous"></script>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' href='CSS/styles.css'>
+    <link rel='stylesheet' type='text/css' href='CSS/spin.css'>
+    <title>Godziny konsultacji</title>
+    <script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="grid">
-            <header class="grid-item-1">
-                <div class="grid-item_bar"></div>
-                <div class="grid-item-1_h1">
+    <div class='container'>
+        <div class='grid'>
+            <header class='grid-item-1'>
+                <div class='grid-item_bar'></div>
+                <div class='grid-item-1_div-h1'>
                     <h1>Godziny Konsultacji</h1>
                 </div>
             </header>
-            <main class="grid-item-2">
-                <div class="grid-item-2_timer">
+            <main class='grid-item-2'>
+                <div class='grid-item-2_timer'>
                     <p class='grid-item-2_timer_p'>
                         <strong class='consulting-day'>-------</strong>
                         <br>
                         <time class='consulting-hour'>-----</time>
                     </p>
                     <div class='timer_wrap-spinner'>
-                        <div class="timer_spinner"></div>   
+                        <div class='timer_spinner'></div>   
                     </div>
                 </div>
-                <form class=''>
+                <form>
                     <p>Logowanie jest dostępne tylko dla Pana Doktora Nowaka!</p>
-                    <label for="inputEmail">Email address</label>
-                    <input type="email" class="" id="inputEmail" name="inputEmail" aria-describedby="emailHelp"
-                        autocomplete="on" placeholder="Email adres...">
+                    <label for='inputEmail'>Adres Email</label>
+                    <input type='email' id='inputEmail' name='inputEmail' aria-describedby='emailHelp'
+                        autocomplete='on' placeholder='Email adres...'>
 
-                    <label for="inputPassword">Password</label>
-                    <input type="password" class="" id="inputPassword" name="inputPassword" autocomplete="on"
-                        placeholder="Password">
-                    <button type="submit" class="form_btn-login">Zaloguj</button>
+                    <label for='inputPassword'>Hasło</label>
+                    <input type='password' id='inputPassword' name='inputPassword' autocomplete='on'
+                        placeholder='Password'>
+                    <button type='submit' class='form_btn-login'>Zaloguj</button>
                 </form>
             </main>
-            <div class="grid-item-3">
-                <div class="grid-item-3_div">
-                    <button class='toggle-btn'>
-                        <i class="fas fa-user-md fa-2x"></i>
+            <div class='grid-item-3'>
+                <div class='grid-item-3_div'>
+                    <button class='div_toggle-btn' id='toggle-btn'>
+                        <i class='fas fa-user-md fa-2x'></i>
+                    </button>
+                    <button class='div_toggle-btn' id='return-btn'>
+                        <i class='fas fa-undo-alt fa-2x'></i>
+                    </button>
+                    <button class='div_logout-btn'>
+                        <i class='fas fa-sign-out-alt fa-2x'></i>
                     </button>
                 </div>
-                <div class="group-btn group-days">
+                <div class='group-btn group-days'>
                     <button type='button' class='group-btn_btn'>Poniedziałek</button>
                     <button type='button' class='group-btn_btn'>Wtorek</button>
                     <button type='button' class='group-btn_btn'>Środa</button>
                     <button type='button' class='group-btn_btn'>Czwartek</button>
                     <button type='button' class='group-btn_btn'>Piątek</button>
                 </div>
-                <div class="group-btn group-hours">
+                <div class='group-btn group-hours'>
                     <button type='button' class='group-btn_btn'>8.00 - 9.00</button>
                     <button type='button' class='group-btn_btn'>9.00 - 10.00</button>
                     <button type='button' class='group-btn_btn'>10.00 - 11.00</button>
@@ -62,26 +68,27 @@
                     <button type='button' class='group-btn_btn'>12.00 - 13.00</button>
                 </div>
             </div>
-            <footer class="grid-item-4">
+            <footer class='grid-item-4'>
                 <p>Ostatnia zmiana godzin konsultacji nastąpiła <time class='consulting-change-time'>??:??</time></p>
                 <span>© 2020 J. Nam.<span>
             </footer>
         </div>
     </div>
 </body>
-<script type="module" src='./scripts/spin.js'></script>
-<script type="module" src='./scripts/spinner.js'></script>
+<script type='module' src='./scripts/spin.js'></script>
+<script type='module' src='./scripts/spinner.js'></script>
 
-<!-- <script type="module" src="node_modules/spin.js/spin.js"></script> -->
+<!-- <script type='module' src='node_modules/spin.js/spin.js'></script> -->
 
-<script type="module" src='./environments/environmnet.js'></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js"></script>
+<script type='module' src='./environments/environmnet.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js'></script>
 
-<script type="module" src='./scripts/auth.js'></script>
-<script type="module" src='./scripts/app.js'></script>
-<script type="module" src='./scripts/database.js'></script>
+<script type='module' src='./scripts/auth.js'></script>
+<script type='module' src='./scripts/app.js'></script>
+<script type='module' src='./scripts/handle-btns.js'></script>
+<script type='module' src='./scripts/database.js'></script>
 
 
 </html>

@@ -1,48 +1,15 @@
 import { pushData } from "./database.js";
-
+import { toggleTimer } from "./handle-btns.js";
 
 export const consultingDay = document.querySelector('.consulting-day');
 export const consultingHour = document.querySelector('.consulting-hour');
 export const consultingTime = document.querySelector('.consulting-change-time');
 
-const toggleBtn = document.querySelector('.toggle-btn')
+const toggleBtn = document.querySelector('.div_toggle-btn')
 toggleBtn.addEventListener('click', () => {
     toggleTimer();
 })
 
-export function toggleTimer() {
-    firebase.auth().onAuthStateChanged(function (user) {
-        if (user) {
-            // User is signed in.
-            console.log(user)
-            const toggleBtnDiv = document.querySelector('.grid-item-3_div');
-            toggleBtnDiv.setAttribute('style', 'display: none');
-
-
-            const groupBtnDays = document.querySelector('.group-days');
-            groupBtnDays.setAttribute('style', 'display: flex');
-        } else {
-            // No user is signed in.
-            const timer = document.querySelector('.grid-item-2_timer')
-            const form = document.querySelector('form')
-            const toggleTimer = getComputedStyle(timer);
-            const getTimerDisplay = toggleTimer.display;
-            switch (getTimerDisplay) {
-                case 'flex':
-                    timer.setAttribute('style', 'display: none;');
-                    form.setAttribute('style', 'display: flex;');
-                    // login.innerHTML = 'Wróc';
-                    break;
-                case 'none':
-                    timer.setAttribute('style', 'display: flex;');
-                    form.setAttribute('style', 'display: none;');
-                    // login.innerHTML = 'Zaloguj';
-                    break;
-            }
-        }
-    });
-
-}
 const groupDays = document.querySelector('.group-days');
 groupDays.addEventListener('click', (e) => {
     if (e.target.classList.contains('group-btn_btn')) {
@@ -58,9 +25,17 @@ groupHours.addEventListener('click', (e) => {
         consultingHour.innerHTML = e.target.innerText;
         groupHours.setAttribute('style', 'display: none;');
 
+        const toggleBtn = document.querySelector('#toggle-btn');
+        toggleBtn.setAttribute('style', 'display: flex');
+
         const toggleBtnDiv = document.querySelector('.grid-item-3_div');
         toggleBtnDiv.setAttribute('style', 'display: flex');
+
+        const returnBtn = document.querySelector('#return-btn');
+        returnBtn.setAttribute('style', 'display: none');
+
         updateConsultingTime()
+
         const selectedDay = consultingDay.innerHTML;
         const selectedHour = e.target.innerText;
         pushData(selectedDay, selectedHour);
@@ -68,7 +43,7 @@ groupHours.addEventListener('click', (e) => {
 });
 
 function updateConsultingTime() {
-   
+
     const now = new Date();
     const getMonth = "0" + (now.getMonth() + 1);
     const getDay = "0" + now.getDate();

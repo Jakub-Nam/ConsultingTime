@@ -42,3 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.alert("Wystąpił błąd podczas ładowania czasu konsultacji: ", error);
     });
 });
+
+
+

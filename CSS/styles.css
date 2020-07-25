@@ -1,7 +1,6 @@
 * {
   margin: 0px;
   padding: 0px;
-  /* color: #360828; */
   color: #f7dff0;
   font-style: sans-serif;
 }
@@ -15,7 +14,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
-  grid-template-rows: 0.7fr 2fr 2fr 0.3fr;
+  grid-template-rows: 0.6fr 1.3fr 1.8fr 0.3fr;
   background: black;
   min-height: 100%;
 }
@@ -56,7 +55,7 @@
   background: #3f072e;
 }
 
-.grid-item-1_h1 {
+.grid-item-1_div-h1 {
   min-height: 90%;
   display: flex;
   justify-content: center;
@@ -69,13 +68,12 @@ h1 {
 
 .grid-item-2_timer {
   grid-column: 2;
-  min-width: 40%;
-  min-height: 45%;
+  min-width: 45%;
+  min-height: 55%;
   background: #E30425;
   border-radius: 10px;
   padding: 0.1em;
   align-self: center;
-  /* margin-top: 20%; */
   display: flex;
   justify-content: center;
 }
@@ -86,6 +84,7 @@ h1 {
   font-size: 2.5em;
   text-align: center;
 }
+
 .timer_wrap-spinner {
   position: relative;
 }
@@ -94,6 +93,7 @@ h1 {
   min-width: 100%;
   min-height: 100%;
   display: flex;
+  flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
 }
@@ -103,7 +103,11 @@ h1 {
   border: none;
   padding: 1em;
   border-radius: 50%;
-  margin: 1em;
+  margin: 0 1em 1em 0;
+}
+
+#return-btn {
+  display: none;
 }
 
 .grid-item-4 p {
@@ -122,7 +126,7 @@ span {
   color: #771b5b;
 }
 
-.grid-item-3_div button:hover .fa-user-md {
+.grid-item-3_div button:hover .fa-2x {
   color: #771b5b;
 }
 
@@ -164,15 +168,17 @@ input {
   justify-content: center;
   flex-direction: column;
 }
+
 .group-days {
   display: none;
 }
+
 .group-hours {
   display: none;
 }
 
 .group-btn_btn {
-  width: 60%;
+  width: 55%;
   margin: auto;
   padding: 0.5em;
   background-color: #E30425;
