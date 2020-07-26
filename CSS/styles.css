@@ -1,7 +1,7 @@
 * {
   margin: 0px;
   padding: 0px;
-  color: #f7dff0;
+  color: #000000dc;
   font-style: sans-serif;
 }
 
@@ -15,20 +15,19 @@
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
   grid-template-rows: 0.6fr 1.3fr 1.8fr 0.3fr;
-  background: black;
   min-height: 100%;
 }
 
 .grid-item-1 {
   grid-column: 1/4;
   grid-row: 1 / 2;
-  background-color: #5e0d4d;
+  background-color: #1faa00;
 }
 
 .grid-item-2 {
   grid-column: 1/4;
   grid-row: 2 / 3;
-  background-color: #c552a3;
+  background-color: #dcedc8;
   display: flex;
   justify-content: center;
 }
@@ -36,23 +35,23 @@
 .grid-item-3 {
   grid-column: 1/4;
   grid-row: 3 / 4;
-  background-color: #c552a3;
+  background-color: #dcedc8;
 }
 
 .grid-item-4 {
   grid-column: 1/4;
   grid-row: 4 / 5;
-  background: #5e0d4d;
+  background: #1faa00;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
 }
 
-.grid-item_bar {
+.grid-item-1_bar {
   min-height: 10%;
   min-width: 100%;
-  background: #3f072e;
+  background: #167900;
 }
 
 .grid-item-1_div-h1 {
@@ -70,7 +69,7 @@ h1 {
   grid-column: 2;
   min-width: 45%;
   min-height: 55%;
-  background: #E30425;
+  background: #7dff13;
   border-radius: 10px;
   padding: 0.1em;
   align-self: center;
@@ -99,7 +98,7 @@ h1 {
 }
 
 .grid-item-3_div button {
-  background: #f71c1c;
+  background: #7dff13;
   border: none;
   padding: 1em;
   border-radius: 50%;
@@ -122,7 +121,7 @@ span {
 }
 
 .grid-item-3_div button:hover {
-  background: #ffd1e0;
+  background: #ffffff;
   color: #771b5b;
 }
 
@@ -143,7 +142,7 @@ form p {
 
 label {
   padding-top: 0.6em;
-  color: #ffffff;
+  color: #000000;
   font-size: 1.2em;
 }
 
@@ -155,7 +154,7 @@ input {
 
 .form_btn-login {
   margin-top: 0.7em;
-  background: #f71c1c;
+  background: #76ff03;
   border: transparent;
   border-radius: 1em;
   padding: 0.2em;
@@ -181,7 +180,7 @@ input {
   width: 55%;
   margin: auto;
   padding: 0.5em;
-  background-color: #E30425;
+  background-color: #76ff03;
   border: none;
   border-radius: 5px;
   font-size: 1.2em;

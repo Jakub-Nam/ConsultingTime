@@ -1,2 +1,9 @@
 environment.js
 environments
+.firebase/
+.firebaserc
+database.rules.json
+dist/
+firebase.json
+firestore.indexes.json
+firestore.rules

@@ -1,9 +1,9 @@
 import { pushData } from "./database.js";
 import { toggleTimer } from "./handle-btns.js";
 
-export const consultingDay = document.querySelector('.consulting-day');
-export const consultingHour = document.querySelector('.consulting-hour');
-export const consultingTime = document.querySelector('.consulting-change-time');
+export const timerConsultingDay = document.querySelector('.consulting-day');
+export const timerConsultingHour = document.querySelector('.consulting-hour');
+export const lastChangeConsultingTime = document.querySelector('.consulting-change-time');
 
 const toggleBtn = document.querySelector('.div_toggle-btn')
 toggleBtn.addEventListener('click', () => {
@@ -13,7 +13,7 @@ toggleBtn.addEventListener('click', () => {
 const groupDays = document.querySelector('.group-days');
 groupDays.addEventListener('click', (e) => {
     if (e.target.classList.contains('group-btn_btn')) {
-        consultingDay.innerHTML = e.target.innerText;
+        timerConsultingDay.innerHTML = e.target.innerText;
         groupDays.setAttribute('style', 'display: none;');
         groupHours.setAttribute('style', 'display: flex;');
     };
@@ -22,7 +22,7 @@ groupDays.addEventListener('click', (e) => {
 const groupHours = document.querySelector('.group-hours');
 groupHours.addEventListener('click', (e) => {
     if (e.target.classList.contains('group-btn_btn')) {
-        consultingHour.innerHTML = e.target.innerText;
+        timerConsultingHour.innerHTML = e.target.innerText;
         groupHours.setAttribute('style', 'display: none;');
 
         const toggleBtn = document.querySelector('#toggle-btn');
@@ -36,7 +36,7 @@ groupHours.addEventListener('click', (e) => {
 
         updateConsultingTime()
 
-        const selectedDay = consultingDay.innerHTML;
+        const selectedDay = timerConsultingDay.innerHTML;
         const selectedHour = e.target.innerText;
         pushData(selectedDay, selectedHour);
     };
@@ -57,5 +57,5 @@ function updateConsultingTime() {
 
     const dateTime = `o godzinie ${time}, dnia ${date}r.`
 
-    consultingTime.innerHTML = dateTime;
+    lastChangeConsultingTime.innerHTML = dateTime;
 };
