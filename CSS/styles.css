@@ -3,6 +3,7 @@
   padding: 0px;
   color: #000000dc;
   font-style: sans-serif;
+ 
 }
 
 .container {
@@ -14,7 +15,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr, 1fr, 1fr;
-  grid-template-rows: 0.6fr 1.3fr 1.8fr 0.3fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.3fr;
   min-height: 100%;
 }
 
@@ -36,6 +37,7 @@
   grid-column: 1/4;
   grid-row: 3 / 4;
   background-color: #dcedc8;
+
 }
 
 .grid-item-4 {
@@ -68,7 +70,7 @@ h1 {
 .grid-item-2_timer {
   grid-column: 2;
   min-width: 45%;
-  min-height: 55%;
+  min-height: 45%;
   background: #7dff13;
   border-radius: 10px;
   padding: 0.1em;
@@ -105,7 +107,7 @@ h1 {
   margin: 0 1em 1em 0;
 }
 
-#return-btn {
+#return_btn {
   display: none;
 }
 
@@ -129,7 +131,7 @@ span {
   color: #771b5b;
 }
 
-form {
+.grid-item-2_auth-form {
   max-width: 60%;
   display: none;
   flex-direction: column;
@@ -137,6 +139,7 @@ form {
 }
 
 form p {
+  margin-top: 0.7em;
   text-align: center;
 }
 
@@ -152,13 +155,14 @@ input {
   color: #000000;
 }
 
-.form_btn-login {
-  margin-top: 0.7em;
-  background: #76ff03;
+form button {
+  margin: 0.7em 0;
+  background: #994455;
+  color: #ffffff;
   border: transparent;
   border-radius: 1em;
   padding: 0.2em;
-  font-size: 1em;
+  font-size: 1.2em;
 }
 
 .group-btn {
@@ -167,8 +171,17 @@ input {
   justify-content: center;
   flex-direction: column;
 }
-.datetime-folder {
+.grid-item-3__timer-form {
   display: none;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+}
+.form_btn-setTime {
+  height: 1em;
+}
+/* .start-time {
+  position: relative;
 }
 .group-days {
   display: none;
@@ -176,7 +189,7 @@ input {
 
 .group-hours {
   display: none;
-}
+} */
 
 .group-btn_btn {
   width: 55%;

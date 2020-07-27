@@ -1,6 +1,8 @@
 // import { firebaseConfig } from './../environments/environmnet.js';
 // import { toggleTimer } from './app.js';
 // firebase.initializeApp(firebaseConfig);
+import { returnToMainDeskop } from "./handle-btns.js";
+// const { returnToMainDeskop } = require("./handle-btns");
 
 class User {
     constructor(login, password) {
@@ -9,7 +11,7 @@ class User {
     }
 }
 
-document.querySelector('form').addEventListener('submit', event => {
+document.querySelector('.grid-item-2_auth-form').addEventListener('submit', event => {
 
     event.preventDefault();
 
@@ -21,7 +23,6 @@ document.querySelector('form').addEventListener('submit', event => {
 
     firebase.auth().signInWithEmailAndPassword(user.login, user.password)
         .then(response => {
-            console.log('res', response);
             window.alert("Pomyślnie zalogowano.");
 
             const form = document.querySelector('form');
@@ -30,15 +31,16 @@ document.querySelector('form').addEventListener('submit', event => {
             const timer = document.querySelector('.grid-item-2_timer');
             timer.setAttribute('style', 'display: flex');
 
-            const toggleBtnDiv = document.querySelector('.grid-item-3_div');
-            toggleBtnDiv.setAttribute('style', 'display: none');
+            const toggleBtn = document.querySelector('#toggle_btn');
+            toggleBtn.setAttribute('style', 'display: none');
 
-            const groupBtnDays = document.querySelector('.group-days');
-            groupBtnDays.setAttribute('style', 'display: flex');
+            // const groupBtnDays = document.querySelector('.group-days');
+            // groupBtnDays.setAttribute('style', 'display: flex');
 
         })
         .catch(err => {
             window.alert("Wystąpił błąd")
+            console.log(err)
         });
 });
 
@@ -52,7 +54,8 @@ logoutBtn.addEventListener('click', () =>
     firebase.auth().signOut()
         .then(() => {
             // Sign-out successful.
-            logoutBtn.setAttribute('style', 'display: none');
+            // logoutBtn.setAttribute('style', 'display: none');
+            returnToMainDeskop();
             window.alert("Zostałeś pomyślnie wylogowany")
         }).catch(() => {
             // An error happened.

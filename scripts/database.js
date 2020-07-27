@@ -1,19 +1,22 @@
 import { timerConsultingDay } from "./app.js";
-import { timerConsultingHour } from "./app.js";
+import { timerConsultingHours } from "./app.js";
 import { lastChangeConsultingTime } from "./app.js";
 import { spinner } from "./spinner.js";
+import { returnToMainDeskop } from "./handle-btns.js";
 
 const db = firebase.firestore();
 
-export function pushData(selectedDay, selectedHour) {
+export function pushData(selectedDay, selectedFromHour, selectedToHour) {
     const now = new Date();
     db.collection("data").doc("time").set({
-        day: selectedDay,
-        hour: selectedHour,
+        selectedDay: selectedDay,
+        fromHour: selectedFromHour,
+        toHour: selectedToHour,
         created_at: firebase.firestore.Timestamp.fromDate(now)
     })
         .then(function () {
             window.alert("Pomyślnie zmieniono czas konsultacji");
+            returnToMainDeskop();
         })
         .catch(function (error) {
             window.alert("Wystąpił błąd podczas zmiany czasu konsultacji: ", error);
@@ -33,8 +36,8 @@ function fetchDatabase(data) {
             timerParagaphDisplay.setAttribute('style', 'display: block');
 
             const timestamp = new Date(data.created_at.toDate());
-            timerConsultingDay.innerHTML = data.day;
-            timerConsultingHour.innerHTML = data.hour;
+            timerConsultingDay.innerHTML = data.selectedDay;
+            timerConsultingHours.innerHTML = `${data.fromHour} do ${data.toHour}`
 
             const getMonth = "0" + (timestamp.getMonth() + 1);
             const getDay = "0" + timestamp.getDate();

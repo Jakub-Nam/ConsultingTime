@@ -6,8 +6,11 @@
 
     <link rel='stylesheet' type='text/css' href='CSS/styles.css'>
     <link rel='stylesheet' type='text/css' href='CSS/spin.css'>
+    <link rel='stylesheet' type='text/css' href='CSS/watch.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
     <title>Godziny konsultacji</title>
     <script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
 </head>
@@ -26,13 +29,13 @@
                     <p class='grid-item-2_timer_p'>
                         <strong class='consulting-day'>-------</strong>
                         <br>
-                        <time class='consulting-hour'>-----</time>
+                        <time class='consulting-hours'>-----</time>
                     </p>
                     <div class='timer_wrap-spinner'>
                         <div class='timer_spinner'></div>
                     </div>
                 </div>
-                <form>
+                <form class='grid-item-2_auth-form'>
                     <p>Logowanie jest dostępne tylko dla Pana Doktora Nowaka!</p>
                     <label for='inputEmail'>Adres Email</label>
                     <input type='email' id='inputEmail' name='inputEmail' aria-describedby='emailHelp' autocomplete='on'
@@ -41,16 +44,29 @@
                     <label for='inputPassword'>Hasło</label>
                     <input type='password' id='inputPassword' name='inputPassword' autocomplete='on'
                         placeholder='Password'>
-                    <button type='submit' class='form_btn-login'>Zaloguj</button>
+                    <button type='submit' id="formBtnLogin" class='form_btn'>Zaloguj</button>
                 </form>
             </main>
             <div class='grid-item-3'>
-                <input id="flatpickr">
+ 
+                    <form class='grid-item-3__timer-form'>
+                        <label for="startTime">Data</label>
+                        <input id="flatpickr" class="grid-item-3__timer">
+
+                        <label for="startTime">Początek konsultacji</label>
+                        <input type="time" name="time" id="startTime" class="grid-item-3__timer" />
+
+
+                        <label for="endTime">Koniec konsultacji</label>
+                        <input type="time" name="endTime" id="endTime" class="grid-item-3__timer" />
+                        <button type='submit' class='form_btn'>Zatwierdź</button>
+                    </form>
+
                 <div class='grid-item-3_div'>
-                    <button class='div_toggle-btn' id='toggle-btn'>
+                    <button class='div_toggle-btn' id='toggle_btn'>
                         <i class='fas fa-user-md fa-2x'></i>
                     </button>
-                    <button class='div_toggle-btn' id='return-btn'>
+                    <button class='div_toggle-btn' id='return_btn'>
                         <i class='fas fa-undo-alt fa-2x'></i>
                     </button>
                     <button class='div_logout-btn'>
