@@ -59,3 +59,5 @@ function updateConsultingTime() {
 
     lastChangeConsultingTime.innerHTML = dateTime;
 };
+
+tail.DateTime("#demo");

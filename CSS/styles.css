@@ -167,7 +167,9 @@ input {
   justify-content: center;
   flex-direction: column;
 }
-
+.datetime-folder {
+  display: none;
+}
 .group-days {
   display: none;
 }
