@@ -9,38 +9,44 @@ const toggleBtn = document.querySelector('.div_toggle-btn')
 toggleBtn.addEventListener('click', () => {
     toggleTimer();
 })
+const example = flatpickr('#flatpickr');
+// flatpickr('selector', options);
+flatpickr('#flatpickr', {
 
-const groupDays = document.querySelector('.group-days');
-groupDays.addEventListener('click', (e) => {
-    if (e.target.classList.contains('group-btn_btn')) {
-        timerConsultingDay.innerHTML = e.target.innerText;
-        groupDays.setAttribute('style', 'display: none;');
-        groupHours.setAttribute('style', 'display: flex;');
-    };
+    // A string of characters which are used to define how the date will be displayed in the input box. 
+    dateFormat: 'd-m-Y'
 });
+// const groupDays = document.querySelector('.group-days');
+// groupDays.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('group-btn_btn')) {
+//         timerConsultingDay.innerHTML = e.target.innerText;
+//         groupDays.setAttribute('style', 'display: none;');
+//         groupHours.setAttribute('style', 'display: flex;');
+//     };
+// });
 
-const groupHours = document.querySelector('.group-hours');
-groupHours.addEventListener('click', (e) => {
-    if (e.target.classList.contains('group-btn_btn')) {
-        timerConsultingHour.innerHTML = e.target.innerText;
-        groupHours.setAttribute('style', 'display: none;');
+// const groupHours = document.querySelector('.group-hours');
+// groupHours.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('group-btn_btn')) {
+//         timerConsultingHour.innerHTML = e.target.innerText;
+//         groupHours.setAttribute('style', 'display: none;');
 
-        const toggleBtn = document.querySelector('#toggle-btn');
-        toggleBtn.setAttribute('style', 'display: flex');
+//         const toggleBtn = document.querySelector('#toggle-btn');
+//         toggleBtn.setAttribute('style', 'display: flex');
 
-        const toggleBtnDiv = document.querySelector('.grid-item-3_div');
-        toggleBtnDiv.setAttribute('style', 'display: flex');
+//         const toggleBtnDiv = document.querySelector('.grid-item-3_div');
+//         toggleBtnDiv.setAttribute('style', 'display: flex');
 
-        const returnBtn = document.querySelector('#return-btn');
-        returnBtn.setAttribute('style', 'display: none');
+//         const returnBtn = document.querySelector('#return-btn');
+//         returnBtn.setAttribute('style', 'display: none');
 
-        updateConsultingTime()
+//         updateConsultingTime()
 
-        const selectedDay = timerConsultingDay.innerHTML;
-        const selectedHour = e.target.innerText;
-        pushData(selectedDay, selectedHour);
-    };
-});
+//         const selectedDay = timerConsultingDay.innerHTML;
+//         const selectedHour = e.target.innerText;
+//         pushData(selectedDay, selectedHour);
+//     };
+// });
 
 function updateConsultingTime() {
 
@@ -59,5 +65,3 @@ function updateConsultingTime() {
 
     lastChangeConsultingTime.innerHTML = dateTime;
 };
-
-tail.DateTime("#demo");

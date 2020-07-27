@@ -1,13 +1,13 @@
 <html lang='en'>
 
 <head>
-    <!-- \calendar\css\tail.datetime-default-blue.css -->
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
     <link rel='stylesheet' type='text/css' href='CSS/styles.css'>
     <link rel='stylesheet' type='text/css' href='CSS/spin.css'>
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <title>Godziny konsultacji</title>
     <script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
 </head>
@@ -45,7 +45,7 @@
                 </form>
             </main>
             <div class='grid-item-3'>
-
+                <input id="flatpickr">
                 <div class='grid-item-3_div'>
                     <button class='div_toggle-btn' id='toggle-btn'>
                         <i class='fas fa-user-md fa-2x'></i>
@@ -57,7 +57,7 @@
                         <i class='fas fa-sign-out-alt fa-2x'></i>
                     </button>
                 </div>
-                <div class='group-btn group-days'>
+                <!-- <div class='group-btn group-days'>
                     <button type='button' class='group-btn_btn'>Poniedziałek</button>
                     <button type='button' class='group-btn_btn'>Wtorek</button>
                     <button type='button' class='group-btn_btn'>Środa</button>
@@ -70,7 +70,7 @@
                     <button type='button' class='group-btn_btn'>10.00 - 11.00</button>
                     <button type='button' class='group-btn_btn'>11.00 - 12.00 </button>
                     <button type='button' class='group-btn_btn'>12.00 - 13.00</button>
-                </div>
+                </div> -->
             </div>
             <footer class='grid-item-4'>
                 <p>Ostatnia zmiana godzin konsultacji nastąpiła <time class='consulting-change-time'>??:??</time></p>
