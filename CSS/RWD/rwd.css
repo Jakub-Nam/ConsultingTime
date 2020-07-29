@@ -1,0 +1,29 @@
+@media all and (min-width:575px) and (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr, 1fr, 1fr;
+        grid-template-rows: 0.4fr 1.3fr 1fr 0.3fr;
+    }
+    .grid-item-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .grid-item-1_div-h1 {
+        margin-left: 1em;
+        justify-content: start;
+        align-items: center;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .nav-menu__ul {
+        display: block;
+    }
+
+    .grid-item-3_div {
+        display: none;
+    }
+}

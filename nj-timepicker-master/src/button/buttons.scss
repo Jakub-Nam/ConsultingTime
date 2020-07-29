@@ -1,0 +1,28 @@
+.nj-picker {
+    .nj-action-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .nj-action-button {
+            padding: 0.8em;
+            text-align: center;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .nj-action-save {
+            background: var(--save-button-bg);
+            color: var(--save-button-fc);
+        }
+
+        .nj-action-clear {
+            background: var(--clear-button-bg);
+            color: var(--clear-button-fc);
+        }
+
+        .nj-action-close {
+            background: var(--close-button-bg);
+            color: var(--close-button-fc);
+        }
+    }
+}

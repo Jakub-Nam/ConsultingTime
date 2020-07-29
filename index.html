@@ -1,0 +1,121 @@
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' type='text/css' href='CSS/styles.css'>
+    <link rel='stylesheet' type='text/css' href='CSS/spin.css'>
+    <link rel='stylesheet' type='text/css' href='CSS/watch.css'>
+    <link rel='stylesheet' type='text/css' href='CSS/RWD/rwd.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <title>Godziny konsultacji</title>
+
+</head>
+
+<body>
+    <div class='container'>
+        <div class='grid'>
+            <header class='grid-item-1'>
+                <!-- <div class='grid-item-1_bar'></div> -->
+                <div class='grid-item-1_div-h1'>
+                    <h1>Godziny Konsultacji</h1>
+                </div>
+                <nav >
+                    <ul class="nav-menu__ul">
+                        <li><a href="#">Zaloguj</a></li>
+                        <li class='logged'>
+                            <a href="#">Zmień czas</a>
+                        </li>
+                        <li class='logged'>
+                            <a href="#">Powrót</a>
+                        </li>
+                        <li class='logged'  >
+                            <a href="#" id="a-logout">Wyloguj</a>
+                        </li> 
+                    </ul>
+                </nav>
+            </header>
+            <main class='grid-item-2'>
+                <div class='grid-item-2_timer'>
+                    <p class='grid-item-2_timer_p'>
+                        <strong class='consulting-day'>-------</strong>
+                        <br>
+                        <time class='consulting-hours'>-----</time>
+                    </p>
+                    <div class='timer_wrap-spinner'>
+                        <div class='timer_spinner'></div>
+                    </div>
+                </div>
+                <form class='grid-item-2_auth-form'>
+                    <p>Logowanie jest dostępne tylko dla Pana Doktora Nowaka!</p>
+                    <label for='inputEmail'>Adres Email</label>
+                    <input type='email' id='inputEmail' name='inputEmail' aria-describedby='emailHelp' autocomplete='on'
+                        placeholder='Email adres...'>
+
+                    <label for='inputPassword'>Hasło</label>
+                    <input type='password' id='inputPassword' name='inputPassword' autocomplete='on'
+                        placeholder='Password'>
+                    <button type='submit' id="formBtnLogin" class='form_btn'>Zaloguj</button>
+                </form>
+            </main>
+            <div class='grid-item-3'>
+                <div class='item-3__alert'>
+                    <span>
+                    </span>
+                </div>
+
+                <p class='item-3__comment'></p>
+
+                <form class='grid-item-3__timer-form'>
+                    <label for="startTime">Data</label>
+                    <input id="flatpickr" class="timer-form__input">
+
+                    <label for="startTime">Początek konsultacji</label>
+                    <input type="time" name="time" id="startTime" class="timer-form__input" />
+
+
+                    <label for="endTime">Koniec konsultacji</label>
+                    <input type="time" name="endTime" id="endTime" class="timer-form__input" />
+
+                    <label for="comment">Komentarz dla studentów</label>
+                    <input type="text" name="comment" id="comment" class="timer-form__input" maxlength="90" />
+                    <button type='submit' class='form_btn'>Zatwierdź</button>
+                </form>
+
+                <div class='grid-item-3_div'>
+                    <button class='div_toggle-btn' id='toggle_btn'>
+                        <i class='fas fa-user-md fa-2x'></i>
+                    </button>
+                    <button class='div_toggle-btn' id='return_btn'>
+                        <i class='fas fa-undo-alt fa-2x'></i>
+                    </button>
+                    <button class='logout-btn logged'>
+                        <i class='fas fa-sign-out-alt fa-2x'></i>
+                    </button>
+                </div>
+            </div>
+            <footer class='grid-item-4'>
+                <p>Ostatnia zmiana godzin konsultacji nastąpiła <time class='consulting-change-time'>??:??</time></p>
+                <span>© 2020 J. Nam.<span>
+            </footer>
+        </div>
+    </div>
+</body>
+<script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script type='module' src='./scripts/spin.js'></script>
+<script type='module' src='./scripts/spinner.js'></script>
+
+<script type='module' src='./environments/environmnet.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js'></script>
+<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js'></script>
+
+<script type='module' src='./scripts/auth.js'></script>
+<script type='module' src='./scripts/app.js'></script>
+<script type='module' src='./scripts/handle-btns.js'></script>
+<script type='module' src='./scripts/database.js'></script>
+
+
+</html>
