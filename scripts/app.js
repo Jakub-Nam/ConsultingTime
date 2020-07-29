@@ -1,5 +1,4 @@
 import { pushData } from "./database.js";
-
 const example = flatpickr('#flatpickr');
 // flatpickr('selector', options);
 flatpickr('#flatpickr', {
