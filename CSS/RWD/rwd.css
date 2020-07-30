@@ -1,4 +1,4 @@
-@media all and (min-width:575px) /* and (max-width: 768px) */ {
+@media all and (min-width:575px) and (max-width: 768px) {
     .grid {
         grid-template-columns: 1fr, 1fr, 1fr;
         grid-template-rows: 0.4fr 1.3fr 1fr 0.3fr;
@@ -19,10 +19,16 @@
     }
     nav ul {
         display: flex;
-
     }
-
+    .grid-item-2_timer {
+        min-width: 35%;
+        min-height: 45%;
+    }
     .grid-item-3_div {
         display: none;
     }
+}
+
+@media all and (min-width:768px) and (max-width: 991px) {
+    
 }
