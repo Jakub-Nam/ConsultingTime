@@ -1,4 +1,4 @@
-@media all and (min-width:575px) and (max-width: 768px) {
+@media all and (min-width:575px) {
     .grid {
         grid-template-columns: 1fr, 1fr, 1fr;
         grid-template-rows: 0.4fr 1.3fr 1fr 0.3fr;
@@ -27,8 +27,7 @@
     .grid-item-3_div {
         display: none;
     }
-}
-
-@media all and (min-width:768px) and (max-width: 991px) {
-    
+    .timer-form__input {
+        font-size: 1em;
+    }
 }
