@@ -15,13 +15,13 @@ function checkUser() {
     firebase.auth().onAuthStateChanged(user => {
         const logged = document.querySelector('.logged')
         if (!user) {
+
             // User is signed in.
-            // logoutBtn.setAttribute('style', 'display: none');
             Array.from(document.querySelectorAll('.logged'))
                 .forEach(btn => {
                     btn.style.display = 'none';
                 });
-
+           
         }
         else {
             // No user is signed in.
@@ -30,7 +30,8 @@ function checkUser() {
                 .forEach(btn => {
                     btn.style.display = 'block';
                 });
-
+            const navLogin = document.querySelector('.nav-login-menu')
+            navLogin.setAttribute('style', 'display: none');
 
         }
     })
@@ -56,6 +57,9 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
 
             const toggleBtn = document.querySelector('#toggle_btn');
             toggleBtn.setAttribute('style', 'display: none');
+
+            const navReturn = document.querySelector(".nav-return");
+            navReturn.setAttribute('style', 'display: none')
         })
         .catch(err => {
             window.alert("Wystąpił błąd");

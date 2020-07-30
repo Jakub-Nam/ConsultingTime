@@ -22,13 +22,15 @@
                     <h1>Godziny Konsultacji</h1>
                 </div>
                 <nav >
-                    <ul class="nav-menu__ul">
-                        <li><a href="#">Zaloguj</a></li>
-                        <li class='logged'>
-                            <a href="#">Zmień czas</a>
+                    <ul>
+                        <li class='nav-login-menu'>
+                            <a href="#" >Zaloguj</a>
                         </li>
-                        <li class='logged'>
+                        <li class='nav-return'>
                             <a href="#">Powrót</a>
+                        </li>
+                        <li class='logged nav-change-timer'>
+                            <a href="#">Zmień czas</a>
                         </li>
                         <li class='logged'  >
                             <a href="#" id="a-logout">Wyloguj</a>
@@ -84,10 +86,10 @@
                 </form>
 
                 <div class='grid-item-3_div'>
-                    <button class='div_toggle-btn' id='toggle_btn'>
+                    <button class='div__toggle-btn' id='toggle_btn'>
                         <i class='fas fa-user-md fa-2x'></i>
                     </button>
-                    <button class='div_toggle-btn' id='return_btn'>
+                    <button class='div__toggle-btn' id='return_btn'>
                         <i class='fas fa-undo-alt fa-2x'></i>
                     </button>
                     <button class='logout-btn logged'>
@@ -114,6 +116,7 @@
 
 <script type='module' src='./scripts/auth.js'></script>
 <script type='module' src='./scripts/app.js'></script>
+<script type='module' src='./scripts/handle-navbar.js'></script>
 <script type='module' src='./scripts/handle-btns.js'></script>
 <script type='module' src='./scripts/database.js'></script>
 

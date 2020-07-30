@@ -6,7 +6,7 @@ const grid = document.querySelector('.grid');
 const authForm = document.querySelector('.grid-item-2_auth-form');
 const timer = document.querySelector('.grid-item-2_timer');
 
-const divToggleBtn = document.querySelector('.div_toggle-btn')
+const divToggleBtn = document.querySelector('.div__toggle-btn')
 divToggleBtn.addEventListener('click', () => {
     toggleTimer();
 })
@@ -39,7 +39,7 @@ export function toggleTimer() {
         } else {
             // User is signed in.
 
-            const returnBtn = document.querySelector('#return_btn');
+            // const returnBtn = document.querySelector('#return_btn');
             const returnBtnStyles = getComputedStyle(returnBtn);
             const returnBtnDisplay = returnBtnStyles.display;
 
@@ -58,7 +58,7 @@ export function toggleTimer() {
                     toggleBtn.setAttribute('style', 'display: none');
                     returnBtn.setAttribute('style', 'display: flex');
                     timeForm.setAttribute('style', 'display: flex');
-                    grid.setAttribute('style', 'grid-template-rows: 0.5fr 1fr 2fr 0.3fr');
+                    grid.setAttribute('style', 'grid-template-rows: 0.5fr 1fr 2.2fr 0.3fr');
                     break;
             }
         }

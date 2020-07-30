@@ -67,12 +67,12 @@ h1 {
   color: #f8f8e8;
 }
 
-.nav-menu__ul {
+nav ul{
   display: none;
   list-style: none;
 }
 
-.nav-menu__ul li {
+nav ul li {
   display: inline-block;
   padding: 20px;
 }
@@ -84,7 +84,9 @@ ul li a {
 ul li a:hover {
   color: #1ddbec;
 }
-
+.nav-return {
+  display: none;
+}
 .grid-item-2_timer {
   grid-column: 2;
   min-width: 45%;
@@ -132,7 +134,7 @@ ul li a:hover {
 
 .item-3__comment {
   text-align: center;
-  min-height: 40%;
+  min-height: 30%;
   max-width: 100%;
 }
 .grid-item-3__timer-form {
