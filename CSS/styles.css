@@ -120,19 +120,22 @@ ul li a:hover {
 }
 
 .item-3__alert {
+  text-align: center;
   display: none;
   padding: 0.8em;
   position: absolute;
-  left: 25%;
-  right: 25%;
+  left: 10%;
+  right: 10%;
   border-radius: 10px;
+  background-color: #d83535;
 }
 
 .item-3__alert span {
+  text-align: center;
   color: #ffffff;
-  max-width: 60%;
-  background-color: #d83535;
+
   font-size: 1em;
+
 }
 
 .item-3__comment {

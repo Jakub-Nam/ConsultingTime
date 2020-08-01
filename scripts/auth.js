@@ -67,7 +67,7 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
 
             const grid = document.querySelector('.grid');
             grid.setAttribute('style', 'grid-template-rows: 0.5fr 1fr 1fr 0.3fr');
-            // grid - template - rows: 0.5fr 1fr 1fr 0.3fr;
+
         })
         .catch(err => {
             showAlert("Nieprawidłowe dane")

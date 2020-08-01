@@ -31,7 +31,7 @@ timerForm.addEventListener('submit', (e) => {
 
 export function showAlert(content) {
     const divAlert = document.querySelector('.item-3__alert');
-    divAlert.setAttribute('style', 'display: inline-block');
+    divAlert.setAttribute('style', 'display: block');
 
     const msg = `<span>${content}<span>`
     divAlert.innerHTML = msg;
