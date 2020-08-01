@@ -37,6 +37,7 @@
   grid-column: 1/4;
   grid-row: 3 / 4;
   background-color: #f5f5f0;
+  position: relative;
 }
 
 .grid-item-4 {
@@ -119,17 +120,18 @@ ul li a:hover {
 }
 
 .item-3__alert {
-  background-color: #d83535;
   display: none;
   padding: 0.8em;
   position: absolute;
   left: 25%;
   right: 25%;
-  border: 10px;
+  border-radius: 10px;
 }
 
 .item-3__alert span {
   color: #ffffff;
+  max-width: 60%;
+  background-color: #d83535;
   font-size: 1em;
 }
 

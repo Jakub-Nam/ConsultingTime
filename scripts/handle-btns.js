@@ -5,6 +5,7 @@ const grid = document.querySelector('.grid');
 
 const authForm = document.querySelector('.grid-item-2_auth-form');
 const timer = document.querySelector('.grid-item-2_timer');
+const comment = document.querySelector('.item-3__comment');
 
 const divToggleBtn = document.querySelector('.div__toggle-btn')
 divToggleBtn.addEventListener('click', () => {
@@ -27,12 +28,14 @@ export function toggleTimer() {
                     toggleBtn.setAttribute('style', 'display: none');
                     returnBtn.setAttribute('style', 'display: flex');
                     authForm.setAttribute('style', 'display: flex;');
+                    comment.setAttribute('style', 'display: none;');
                     break;
                 case 'none':
                     timer.setAttribute('style', 'display: flex;');
                     toggleBtn.setAttribute('style', 'display: flex')
                     returnBtn.setAttribute('style', 'display: none');
                     authForm.setAttribute('style', 'display: none;');
+                    comment.setAttribute('style', 'display: block-inline;');
                     break;
             }
 
@@ -66,6 +69,7 @@ export function toggleTimer() {
 }
 
 export function returnToMainDeskop() {
+    timeForm.setAttribute('style', 'display: none');
     toggleTimer();
 }
 

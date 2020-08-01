@@ -22,7 +22,7 @@ function checkUser() {
                 .forEach(btn => {
                     btn.style.display = 'none';
                 });
-           
+
         }
         else {
             // No user is signed in.
@@ -56,11 +56,18 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
             const timer = document.querySelector('.grid-item-2_timer');
             timer.setAttribute('style', 'display: flex');
 
+            const comment = document.querySelector('.item-3__comment');
+            comment.setAttribute('style', 'display: block;');
+
             const toggleBtn = document.querySelector('#toggle_btn');
             toggleBtn.setAttribute('style', 'display: none');
 
             const navReturn = document.querySelector(".nav-return");
             navReturn.setAttribute('style', 'display: none')
+
+            const grid = document.querySelector('.grid');
+            grid.setAttribute('style', 'grid-template-rows: 0.5fr 1fr 1fr 0.3fr');
+            // grid - template - rows: 0.5fr 1fr 1fr 0.3fr;
         })
         .catch(err => {
             showAlert("Nieprawidłowe dane")
@@ -75,7 +82,6 @@ const logoutA = document.querySelector('#a-logout');
 logoutA.addEventListener('click', () =>
     logout()
 );
-// document.addEventListener("click")
 
 function logout() {
     firebase.auth().signOut()
