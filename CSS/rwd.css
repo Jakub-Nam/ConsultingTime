@@ -31,3 +31,10 @@
         font-size: 1em;
     }
 }
+
+@media all and (min-width:800px) {
+    .item-3__alert {
+        left: 35%;
+        right: 35%;
+    }
+}
