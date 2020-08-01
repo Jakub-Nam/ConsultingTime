@@ -1,4 +1,5 @@
 import { returnToMainDeskop } from "./handle-btns.js";
+import { showAlert } from "./app.js";
 
 class User {
     constructor(login, password) {
@@ -47,7 +48,7 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
 
     firebase.auth().signInWithEmailAndPassword(user.login, user.password)
         .then(response => {
-            window.alert("Pomyślnie zalogowano.");
+            showAlert("Pomyślnie zalogowano.")
 
             const form = document.querySelector('form');
             form.setAttribute('style', 'display: none;');
@@ -62,7 +63,7 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
             navReturn.setAttribute('style', 'display: none')
         })
         .catch(err => {
-            window.alert("Wystąpił błąd");
+            showAlert("Nieprawidłowe dane")
         });
 });
 
@@ -81,10 +82,10 @@ function logout() {
         .then(() => {
             // Sign-out successful.
             returnToMainDeskop();
-            window.alert("Zostałeś pomyślnie wylogowany")
+            showAlert("Zostałeś pomyślnie wylogowany")
         }).catch(() => {
             // An error happened.
-            window.alert("Błąd podczas wylogowywania.")
+            showAlert("Błąd podczas wylogowywania.")
         })
 }
 

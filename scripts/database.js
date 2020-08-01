@@ -1,5 +1,6 @@
 import { spinner } from "./spinner.js";
 import { returnToMainDeskop } from "./handle-btns.js";
+import { showAlert } from "./app.js";
 
 const db = firebase.firestore();
 
@@ -35,10 +36,10 @@ function fetchDatabase(data) {
             const comment = document.querySelector('.item-3__comment');
             comment.innerHTML = data.comment;
         } else {
-            window.alert("Nieokreślono godzin konsultacji");
+            showAlert("Nieokreślono godzin konsultacji");
         }
     }).catch(error => {
-        window.alert("Wystąpił błąd podczas ładowania czasu konsultacji: ", error);
+        showAlert("Wystąpił błąd podczas ładowania czasu konsultacji.");
     });
 }
 
@@ -52,10 +53,10 @@ export function pushData(selectedDay, selectedFromHour, selectedToHour, comment)
         created_at: firebase.firestore.Timestamp.fromDate(now)
     })
         .then(function () {
-            window.alert("Pomyślnie zmieniono czas konsultacji");
+            showAlert("Pomyślnie zmieniono czas konsultacji");
             returnToMainDeskop();
         })
         .catch(function (error) {
-            window.alert("Wystąpił błąd podczas zmiany czasu konsultacji: ", error);
+            showAlert("Wystąpił błąd podczas zmiany czasu konsultacji: ", error);
         });
 }

@@ -28,3 +28,15 @@ timerForm.addEventListener('submit', (e) => {
     pushData(selectedDay.value, selectedFromHour.value, selectedToHour.value, comment.value);
     timerForm.reset();
 });
+
+export function showAlert(content) {
+    const divAlert = document.querySelector('.item-3__alert');
+    divAlert.setAttribute('style', 'display: block');
+
+    const msg = `<span>${content}<span>`
+    divAlert.innerHTML = msg;
+    setTimeout(function () {
+        divAlert.setAttribute('style', 'display: none');
+    }, 2000);
+
+}

@@ -119,12 +119,13 @@ ul li a:hover {
 }
 
 .item-3__alert {
-  background-color: #db1212;
+  background-color: #d83535;
   display: none;
   padding: 0.8em;
   position: absolute;
   left: 25%;
   right: 25%;
+  border: 10px;
 }
 
 .item-3__alert span {
