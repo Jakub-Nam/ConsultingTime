@@ -1,5 +1,6 @@
 import { returnToMainDeskop } from "./handle-btns.js";
-import { showAlert } from "./app.js";
+import { showAlert } from "./index.js";
+
 
 class User {
     constructor(login, password) {

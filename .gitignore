@@ -3,7 +3,9 @@ environments
 .firebase/
 .firebaserc
 database.rules.json
-dist/
+dist/assets
+dist/styles
+environment.js
 firebase.json
 firestore.indexes.json
 firestore.rules

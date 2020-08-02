@@ -1,6 +1,6 @@
 import { spinner } from "./spinner.js";
 import { returnToMainDeskop } from "./handle-btns.js";
-import { showAlert } from "./app.js";
+import { showAlert } from "./index.js";
 
 const db = firebase.firestore();
 

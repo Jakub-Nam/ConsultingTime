@@ -2,10 +2,10 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' type='text/css' href='dist/styles.css'>
-    <link rel='stylesheet' type='text/css' href='dist/spin.css'>
-    <link rel='stylesheet' type='text/css' href='dist/watch.css'>
-    <link rel='stylesheet' type='text/css' href='dist/rwd.css'>
+    <link rel='stylesheet' type='text/css' href='./styles/styles.css'>
+    <link rel='stylesheet' type='text/css' href='./styles/spin.css'>
+    <link rel='stylesheet' type='text/css' href='./styles/watch.css'>
+    <link rel='stylesheet' type='text/css' href='./styles/rwd.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Godziny konsultacji</title>
 </head>
@@ -98,17 +98,18 @@
 </body>
 <script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script type='module' src='./scripts/spin.js'></script>
-<script type='module' src='./scripts/spinner.js'></script>
+<!-- <script type='module' src='./scripts/spin.js'></script> -->
+<!-- <script type='module' src='./scripts/spinner.js'></script> -->
 
-<script type='module' src='./environments/environmnet.js'></script>
-<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js'></script>
-<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js'></script>
-<script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js'></script>
+<script defer src='https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js'></script>
+<script defer src='https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js'></script>
+<script defer src='https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js'></script>
 
-<script type='module' src='./scripts/auth.js'></script>
-<script type='module' src='./scripts/app.js'></script>
+<script defer type='module' src='./environments/environmnet.js'></script>
+<!-- <script type='module' src='./scripts/auth.js'></script>
+<script type='module' src='./scripts/index.js'></script>
 <script type='module' src='./scripts/handle-navbar.js'></script>
 <script type='module' src='./scripts/handle-btns.js'></script>
-<script type='module' src='./scripts/database.js'></script>
+<script type='module' src='./scripts/database.js'></script> -->
+<script defer src='./assets/bundle.js'></script>
 </html>

@@ -4,19 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/register": "^7.10.5",
     "firebase-admin": "^8.8.0",
     "firebase-functions": "^3.8.0",
     "gulp": "^4.0.2",
-    "mtr-datepicker": "^0.3.11"
+    "mtr-datepicker": "^0.3.11",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
     "autoprefixer-core": "^6.0.1",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.0",
     "gulp-autoprefixer": "^7.0.1",
-    "gulp-postcss": "^8.0.0"
+    "gulp-postcss": "^8.0.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }

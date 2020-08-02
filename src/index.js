@@ -1,4 +1,7 @@
 import { pushData } from "./database.js";
+// require("@babel/register");
+
+
 const example = flatpickr('#flatpickr');
 // flatpickr('selector', options);
 flatpickr('#flatpickr', {
