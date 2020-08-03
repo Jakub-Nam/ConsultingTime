@@ -6,7 +6,7 @@ gulp.task('css', function () {
     const plugins = [
         autoprefixer
     ];
-    return gulp.src('css/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(postcss(plugins))
         .pipe(gulp.dest('./dist/styles'));
 });

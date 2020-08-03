@@ -1,7 +1,7 @@
 const path = require('path');
 
 
-module.exports = {
+export default {
     entry: './src/',
     output: {
         path: path.resolve(__dirname, 'dist/assets'),
