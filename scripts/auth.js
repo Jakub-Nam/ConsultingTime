@@ -86,11 +86,9 @@ logoutA.addEventListener('click', () =>
 function logout() {
     firebase.auth().signOut()
         .then(() => {
-            // Sign-out successful.
             returnToMainDeskop();
             showAlert("Zostałeś pomyślnie wylogowany")
         }).catch(() => {
-            // An error happened.
             showAlert("Błąd podczas wylogowywania.")
         })
 }

@@ -70,7 +70,6 @@ export function toggleTimer() {
 
 export function returnToMainDeskop() {
     timeForm.setAttribute('style', 'display: none');
-    toggleTimer();
 }
 
 returnBtn.addEventListener('click', () => {
