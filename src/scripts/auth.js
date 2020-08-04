@@ -14,10 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function checkUser() {
     firebase.auth().onAuthStateChanged(user => {
-        const logged = document.querySelector('.logged')
         if (!user) {
-
-            // User is signed in.
             Array.from(document.querySelectorAll('.logged'))
                 .forEach(btn => {
                     btn.style.display = 'none';
@@ -25,8 +22,6 @@ function checkUser() {
 
         }
         else {
-            // No user is signed in.
-            // logoutBtn.setAttribute('style', 'display: block');
             Array.from(document.querySelectorAll('.logged'))
                 .forEach(btn => {
                     btn.style.display = 'block';

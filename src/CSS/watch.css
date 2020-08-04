@@ -1,6 +1,5 @@
 body, html {
     --color: #000000;
-    /* --color: #994455; */
     --size: 1.5rem;
     --border: calc(var(--size) * 0.125);
     --borderRadius: calc(var(--size) * 0.5);
@@ -8,10 +7,6 @@ body, html {
     --margin: calc(var(--size) * 0.25);
     --marginLeft: calc(var(--size) + calc(var(--size) * 0.5));
     background: var(--bgColor);
-    /* height: 100%; */
-    /* align-items: center; */
-    /* justify-content: center;
-    font-family: helvetica, arial, sans-serif; */
 }
 
 label {

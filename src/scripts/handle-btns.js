@@ -17,8 +17,6 @@ export function toggleTimer() {
     firebase.auth().onAuthStateChanged(user => {
 
         if (!user) {
-            // No user is signed in.
-
             const toggleTimerStyles = getComputedStyle(timer);
             const toggleTimerDisplay = toggleTimerStyles.display;
 
@@ -40,9 +38,6 @@ export function toggleTimer() {
             }
 
         } else {
-            // User is signed in.
-
-            // const returnBtn = document.querySelector('#return_btn');
             const returnBtnStyles = getComputedStyle(returnBtn);
             const returnBtnDisplay = returnBtnStyles.display;
 

@@ -4,8 +4,6 @@ import { showAlert } from "./app.js";
 
 const db = firebase.firestore();
 
-
-//observer
 db.collection("data").doc("time").onSnapshot(doc => {
     const data = doc.data()
     fetchDatabase(data);

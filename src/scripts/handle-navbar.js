@@ -21,7 +21,7 @@ navReturn.addEventListener('click', () => {
         } else {
             navChangeTimer.setAttribute('style', 'display: block')
         }
-     })    
+    })
 })
 
 const navChangeTimer = document.querySelector(".nav-change-timer");

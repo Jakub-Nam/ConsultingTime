@@ -1,9 +1,6 @@
 import { pushData } from "./database.js";
-const example = flatpickr('#flatpickr');
-// flatpickr('selector', options);
-flatpickr('#flatpickr', {
 
-    // A string of characters which are used to define how the date will be displayed in the input box. 
+flatpickr('#flatpickr', {
     dateFormat: 'd-m-Y'
 });
 

@@ -1,4 +1,5 @@
 <html lang='en'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>Godziny konsultacji</title>
 </head>
+
 <body>
     <div class='container'>
         <div class='grid'>
@@ -16,10 +18,10 @@
                 <div class='grid-item-1_div-h1'>
                     <h1>Godziny Konsultacji</h1>
                 </div>
-                <nav >
+                <nav>
                     <ul>
                         <li class='nav-login-menu'>
-                            <a href="#" >Zaloguj</a>
+                            <a href="#">Zaloguj</a>
                         </li>
                         <li class='nav-return'>
                             <a href="#">Powrót</a>
@@ -29,7 +31,7 @@
                         </li>
                         <li class='logged'>
                             <a href="#" id="a-logout">Wyloguj</a>
-                        </li> 
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -64,16 +66,19 @@
 
                 <form class='grid-item-3__timer-form'>
                     <label for="startTime">Data</label>
-                    <input id="flatpickr" class="timer-form__input" placeholder="Wybierz date" >
+                    <input id="flatpickr" class="timer-form__input" placeholder="Wybierz date">
 
                     <label for="startTime">Początek konsultacji</label>
-                    <input type="time" name="time" id="startTime" class="timer-form__input" placeholder="Wybierz godzine"/>
+                    <input type="time" name="time" id="startTime" class="timer-form__input"
+                        placeholder="Wybierz godzine" />
 
                     <label for="endTime">Koniec konsultacji</label>
-                    <input type="time" name="endTime" id="endTime" class="timer-form__input" placeholder="Wybierz godzine"/>
+                    <input type="time" name="endTime" id="endTime" class="timer-form__input"
+                        placeholder="Wybierz godzine" />
 
                     <label for="comment">Komentarz dla studentów</label>
-                    <input type="text" name="comment" id="comment" class="timer-form__input" maxlength="90" placeholder="max. 90 znaków" />
+                    <input type="text" name="comment" id="comment" class="timer-form__input" maxlength="90"
+                        placeholder="max. 90 znaków" />
                     <button type='submit' class='form_btn'>Zatwierdź</button>
                 </form>
 
@@ -98,17 +103,18 @@
 </body>
 <script src='https://kit.fontawesome.com/5b64be6f46.js' crossorigin='anonymous'></script>
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-<script type='module' src='./scripts/spin.js'></script>
-<script type='module' src='./scripts/spinner.js'></script>
+<script type='module' src='./src/scripts/spin-data.js'></script>
+<script type='module' src='./src/scripts/spinner.js'></script>
 
 <script type='module' src='./dist/environments/environmnet.js'></script>
 <script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-app.js'></script>
 <script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-auth.js'></script>
 <script src='https://www.gstatic.com/firebasejs/7.14.0/firebase-firestore.js'></script>
 
-<script type='module' src='./scripts/auth.js'></script>
-<script type='module' src='./scripts/app.js'></script>
-<script type='module' src='./scripts/handle-navbar.js'></script>
-<script type='module' src='./scripts/handle-btns.js'></script>
-<script type='module' src='./scripts/database.js'></script>
+<script type='module' src='./src/scripts/auth.js'></script>
+<script type='module' src='./src/scripts/app.js'></script>
+<script type='module' src='./src/scripts/handle-navbar.js'></script>
+<script type='module' src='./src/scripts/handle-btns.js'></script>
+<script type='module' src='./src/scripts/database.js'></script>
+
 </html>
