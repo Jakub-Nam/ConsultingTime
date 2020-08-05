@@ -73,8 +73,8 @@ const logoutBtn = document.querySelector('.logout-btn');
 logoutBtn.addEventListener('click', () =>
     logout()
 );
-const logoutA = document.querySelector('#a-logout');
-logoutA.addEventListener('click', () =>
+const logoutAnchor = document.querySelector('#a-logout');
+logoutAnchor.addEventListener('click', () =>
     logout()
 );
 

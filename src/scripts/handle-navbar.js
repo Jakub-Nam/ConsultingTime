@@ -31,6 +31,7 @@ navChangeTimer.addEventListener('click', () => {
     navReturn.setAttribute('style', 'display: block');
     timeForm.setAttribute('style', 'display: flex');
     toggleTimer();
+    
 
 })
 

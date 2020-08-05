@@ -1,12 +1,12 @@
 const gulp = require('gulp');
 const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer')({ grid: 'autoplace', browsers: ['&gt; 1%'] })
+const autoprefixer = require('autoprefixer')/* ({ grid: 'autoplace', browsers: ['&gt; 1%'] }) */
 
 gulp.task('css', function () {
     const plugins = [
         autoprefixer
     ];
-    return gulp.src('css/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(postcss(plugins))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist/styles'));
 });

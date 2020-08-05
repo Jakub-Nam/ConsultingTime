@@ -65,10 +65,16 @@ export function toggleTimer() {
 
 export function returnToMainDeskop() {
     timeForm.setAttribute('style', 'display: none');
+    authForm.setAttribute('style', 'display: none');
+    timer.setAttribute('style', 'display: flex;');
+    const navReturn = document.querySelector('.nav-return');
+    navReturn.setAttribute('style', 'display: none');
+
+    
 }
 
 returnBtn.addEventListener('click', () => {
-    returnToMainDeskop();
-
+    // returnToMainDeskop();
+    toggleTimer();
 });
 
