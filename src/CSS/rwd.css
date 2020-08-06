@@ -12,6 +12,7 @@
     .grid-item-1_div-h1 {
         justify-content: start;
         align-items: center;
+        padding: 2em 0;
     }
     h1 {
         text-align: left;
@@ -22,10 +23,14 @@
     }
     .grid-item-2_timer {
         min-width: 35%;
-        min-height: 45%;
+        height: 35%;
+        min-height: 35%;
+        padding: 0em;
+        margin: 2em;
     }
     .grid-item-3_div {
         display: none;
+        padding-bottom: 1em;
     }
     .timer-form__input {
         font-size: 1em;
