@@ -67,14 +67,17 @@ export function returnToMainDeskop() {
     timeForm.setAttribute('style', 'display: none');
     authForm.setAttribute('style', 'display: none');
     timer.setAttribute('style', 'display: flex;');
-    const navReturn = document.querySelector('.nav-return');
+    const navReturn = document.querySelector('.nav-menu__return');
     navReturn.setAttribute('style', 'display: none');
+    if(window.innerWidth < 650 ) {
+        toggleTimer();
+    }
 
-    
+
+
 }
 
 returnBtn.addEventListener('click', () => {
-    // returnToMainDeskop();
     toggleTimer();
 });
 

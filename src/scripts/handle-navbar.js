@@ -1,36 +1,42 @@
 import { toggleTimer } from "./handle-btns.js";
 const timeForm = document.querySelector('.grid-item-3__timer-form');
+const timer = document.querySelector('.grid-item-2_timer');
+const authForm = document.querySelector('.grid-item-2_auth-form');
+const navLogin = document.querySelector('.nav-menu__login');
 
-const navLogin = document.querySelector('.nav-login-menu');
 navLogin.addEventListener('click', () => {
     navLogin.setAttribute('style', 'display: none');
     navReturn.setAttribute('style', 'display: block');
-    toggleTimer();
+
+    authForm.setAttribute('style', 'display: flex;');
+    
+    timer.setAttribute('style', 'display: none');
 })
 
-const navReturn = document.querySelector(".nav-return");
+const navReturn = document.querySelector(".nav-menu__return");
 navReturn.addEventListener('click', () => {
     navReturn.setAttribute('style', 'display: none');
     timeForm.setAttribute('style', 'display: none');
+    timer.setAttribute('style', 'display: block');
+    authForm.setAttribute('style', 'display: none;');
 
-    toggleTimer()
     firebase.auth().onAuthStateChanged(user => {
         if (!user) {
             navLogin.setAttribute('style', 'display: block');
-            navChangeTimer.setAttribute('style', 'display: none');
+            navMenuChangeTimer.setAttribute('style', 'display: none');
         } else {
-            navChangeTimer.setAttribute('style', 'display: block')
+            navMenuChangeTimer.setAttribute('style', 'display: block')
         }
     })
 })
 
-const navChangeTimer = document.querySelector(".nav-change-timer");
-navChangeTimer.addEventListener('click', () => {
-    navChangeTimer.setAttribute('style', 'display: none');
+const navMenuChangeTimer = document.querySelector(".nav-menu__change-time");
+navMenuChangeTimer.addEventListener('click', () => {
+    navMenuChangeTimer.setAttribute('style', 'display: none');
     navLogin.setAttribute('style', 'display: none');
     navReturn.setAttribute('style', 'display: block');
     timeForm.setAttribute('style', 'display: flex');
-    toggleTimer();
+    // toggleTimer();
     
 
 })

@@ -9,4 +9,3 @@ firestore.indexes.json
 firestore.rules
 node_modules
 node_modules
-ConsultingTime

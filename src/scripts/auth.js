@@ -14,20 +14,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function checkUser() {
     firebase.auth().onAuthStateChanged(user => {
+        const navLoginAnchor = document.querySelector('.nav-menu__login')
         if (!user) {
             Array.from(document.querySelectorAll('.logged'))
                 .forEach(btn => {
                     btn.style.display = 'none';
                 });
-
+            navLoginAnchor.setAttribute('style', 'display: block');
         }
         else {
             Array.from(document.querySelectorAll('.logged'))
                 .forEach(btn => {
                     btn.style.display = 'block';
                 });
-            const navLogin = document.querySelector('.nav-login-menu')
-            navLogin.setAttribute('style', 'display: none');
+
+            navLoginAnchor.setAttribute('style', 'display: none');
 
         }
     })
@@ -57,7 +58,7 @@ document.querySelector('.grid-item-2_auth-form').addEventListener('submit', even
             const toggleBtn = document.querySelector('#toggle_btn');
             toggleBtn.setAttribute('style', 'display: none');
 
-            const navReturn = document.querySelector(".nav-return");
+            const navReturn = document.querySelector(".nav-menu__return");
             navReturn.setAttribute('style', 'display: none')
 
             const grid = document.querySelector('.grid');

@@ -52,7 +52,6 @@
 }
 
 .grid-item-1_div-h1 {
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -61,7 +60,7 @@
 h1 {
   text-align: center;
   color: #f8f8e8;
-  /* margin-top: 0.5em; */
+  margin: 1em 0;
 }
 
 nav ul {
@@ -78,25 +77,27 @@ ul li a {
   transition: all 0.3s ease 0s;
   text-decoration: none;
   color: #f8f8e8;
+  font-size: medium;
 }
 
 ul li a:hover {
   color: #1ddbec;
 }
 
-.nav-return {
+.nav-menu__return, .nav-menu__login {
   display: none;
 }
 
 .grid-item-2_timer {
   grid-column: 2;
-  min-width: 45%;
-  height: 45%;
+  min-width: 20%;
+  height: 20%;
   min-height: 45%;
   background: #FCFFF7;
-  border: solid 3px #78CDD7;
+  border: solid 1.5px #78CDD7;
   border-radius: 10px;
   padding: 0.1em;
+  margin: 1em 0;
   align-self: center;
   display: flex;
   justify-content: center;
@@ -138,8 +139,11 @@ ul li a:hover {
 }
 
 .item-3__comment {
+  font-size: 1.2em;
   text-align: center;
   max-width: 100%;
+  padding-bottom: 2em;
+
 }
 
 .grid-item-3__timer-form {
@@ -149,17 +153,19 @@ ul li a:hover {
   margin: auto;
 }
 
-.grid-item-3_div {
+.grid-item-3__btn-wrapper {
   min-width: 100%;
-  height: 60%;
-  min-height: 60%;
+  height: 30%;
+  min-height: 30%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: flex-end;
+  padding-bottom: 1em;
+
 }
 
-.grid-item-3_div button {
+.grid-item-3__btn-wrapper button {
   background: #78CDD7;
   border: none;
   padding: 1em;
@@ -167,7 +173,7 @@ ul li a:hover {
   margin: 1em 1em 0em 0;
 }
 
-.grid-item-3_div button:hover {
+.grid-item-3__btn-wrapper button:hover {
   background: #ffffff;
   color: #771b5b;
 }

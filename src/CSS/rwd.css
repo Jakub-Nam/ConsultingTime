@@ -1,4 +1,4 @@
-@media all and (min-width:575px) {
+@media all and (min-width:650px) {
     .grid {
         grid-template-columns: 1fr, 1fr, 1fr;
         grid-template-rows: 0.4fr 1.3fr 1fr 0.3fr;
@@ -16,7 +16,8 @@
     }
     h1 {
         text-align: left;
-        margin-left: 0.5em;
+        margin: 0 0 0 0.5em;
+        
     }
     nav ul {
         display: flex;
@@ -28,7 +29,7 @@
         padding: 0em;
         margin: 2em;
     }
-    .grid-item-3_div {
+    .grid-item-3__btn-wrapper {
         display: none;
         padding-bottom: 1em;
     }

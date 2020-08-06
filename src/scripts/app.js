@@ -24,6 +24,13 @@ timerForm.addEventListener('submit', (e) => {
     const comment = document.querySelector('#comment');
     pushData(selectedDay.value, selectedFromHour.value, selectedToHour.value, comment.value);
     timerForm.reset();
+
+    
+    const navReturnAnchor = document.querySelector(".nav-menu__return");
+    navReturnAnchor.setAttribute('style', 'display: none')
+
+    const navMenuChangeTimer = document.querySelector(".nav-menu__change-time");
+    navMenuChangeTimer.setAttribute('style', 'display: block')
 });
 
 export function showAlert(content) {
