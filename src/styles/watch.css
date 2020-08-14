@@ -24,7 +24,7 @@ label {
     border-radius: var(--borderRadius);
     color: #222;
     font-size: var(--size);
-    padding: var(--margin) var(--margin) var(--margin) var(--marginLeft);
+    padding: 0.5em var(--margin) var(--margin) var(--marginLeft);
     transition: backgroundImage 0.25s;
 }
 
