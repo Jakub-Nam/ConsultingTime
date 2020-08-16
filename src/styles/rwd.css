@@ -36,6 +36,11 @@
     .timer-form__input {
         font-size: 1em;
     }
+    .timer-form__input {
+        padding: 0.4em var(--margin) var(--margin) var(--marginLeft); 
+        /* margin: 1em; */
+        /* var(--margin) var(--margin) var(--marginLeft); */
+    }
 }
 
 @media all and (min-width:800px) {

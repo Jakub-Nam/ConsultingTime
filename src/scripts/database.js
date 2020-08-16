@@ -42,6 +42,16 @@ function fetchDatabase(data) {
 }
 
 export function pushData(selectedDay, selectedFromHour, selectedToHour, comment) {
+    if(selectedDay === '' || selectedFromHour === '' || selectedToHour === '') {
+        const alertDiv = document.querySelector('.item-3__alert');
+        alertDiv.innerHTML = 'Proszę uzupełnic datę oraz godziny konsultacji.'
+        alertDiv.setAttribute('style', 'display: block');
+
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0; 
+
+       return
+    }
     const now = new Date();
     db.collection("data").doc("time").set({
         selectedDay: selectedDay,
