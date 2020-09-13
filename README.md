@@ -10,4 +10,6 @@ Deskop view
 
 Mobile view
 
+<img src="images/mobile/logout.jpg" width="20%">  <img src="images/mobile/auth.jpg" width="20%"> <img src="images/mobile/change-time.jpg" width="20%"> <img src="images/mobile/logged.jpg" width="20%"> 
+
 
