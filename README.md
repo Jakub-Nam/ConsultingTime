@@ -21,4 +21,4 @@ How to install
 2) Download all dependencies:
 - npm install / - yarn install
 
-3) write your api key from firebase project in src/scripts/database.js
+3) Write your api key from firebase project in src/scripts/database.js
