@@ -16,8 +16,9 @@ Mobile view
 
 How to install
 
-1)
+1) git clone https://github.com/Jakub-Nam/ConsultingTime.git
 
-2)
+2) Download all dependencies:
+- npm install / - yarn install
 
-3)
+3) write your api key from firebase project in src/scripts/database.js
