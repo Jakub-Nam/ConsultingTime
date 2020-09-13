@@ -6,7 +6,9 @@ An application that allows students to remotely inform about consultation hours.
 
 Deskop view
 
-<img src="images/deskop/deskop-1-logout.png" width="45%">  <img src="images/deskop/auth-view.png" width="45%"> <img src="images/deskop/change-time.PNG" height="50%"> <img src="images/deskop/deskop-1-logged.png" width="45%"> 
+<img src="images/deskop/deskop-1-logout.png" width="30%">  <img src="images/deskop/auth-view.png" width="30%"> 
+
+<img src="images/deskop/change-time.PNG" width="30%"> <img src="images/deskop/deskop-1-logged.png" width="30%"> 
 
 Mobile view
 
