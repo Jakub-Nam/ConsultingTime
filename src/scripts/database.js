@@ -67,4 +67,4 @@ export function pushData(selectedDay, selectedFromHour, selectedToHour, comment)
         .catch(function (error) {
             showAlert("Wystąpił błąd podczas zmiany czasu konsultacji: ", error);
         });
-}
+}/*  */
